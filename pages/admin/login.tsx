@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import {Form, Input, Button, MessagePlugin, Link} from 'tdesign-react';
 import {DesktopIcon, LockOnIcon} from 'tdesign-icons-react';
@@ -6,10 +7,13 @@ import {useRouter} from 'next/router'
 import {Layout} from 'tdesign-react';
 
 const {Header, Content, Footer, Aside} = Layout;
-
-
 const {FormItem} = Form;
 
+
+/**
+ * 登录表单
+ * @constructor
+ */
 export default function BaseForm() {
     const router = useRouter()
     const rules = [
@@ -27,7 +31,7 @@ export default function BaseForm() {
                 console.log('data', data)
                 if (data.status == 200) {
                     MessagePlugin.info('登录成功');
-                    router.push("/api/hello")
+                    router.push("/admin/index")
                 } else {
                     MessagePlugin.error(data.msg);
                 }
