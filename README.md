@@ -3,6 +3,24 @@
 这是轻量化博客的前端界面
 - node.js 版本18.16.0
 
+## 项目说明
+> 使用的idea一键构建的next.js项目
+> ui框架使用的腾讯的`tDesign`框架
+
+## 依赖包
+```
+// markdown 解析
+npm install react-markdown 
+
+// markdown github语法支持
+npm install remark-gfm
+
+// 安装react的ui框架（tDesign） 腾讯的
+npm install tdesign-react
+
+
+```
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
