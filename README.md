@@ -3,6 +3,11 @@
 这是轻量化博客的前端界面
 - node.js 版本18.16.0
 
+## 项目说明
+> 使用的idea一键构建的next.js项目
+> ui框架使用的腾讯的`tDesign`框架
+
+## 依赖包
 ```
 // markdown 解析
 npm install react-markdown 
