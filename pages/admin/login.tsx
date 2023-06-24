@@ -19,6 +19,7 @@ export default function BaseForm() {
     const rules = [
         {required: true, message: '不能为空', type: 'warning'}
     ]
+    //执行登录
     const onSubmit = (e: any) => {
         console.log(e);
         if (e.validateResult === true) {
@@ -29,10 +30,12 @@ export default function BaseForm() {
                 resp => resp.json()
             ).then(data => {
                 console.log('data', data)
+                //如果状态为200 则跳转到后管页面
                 if (data.status == 200) {
                     MessagePlugin.info('登录成功');
-                    router.push("/admin/index")
+                    router.push("/admin/manage")
                 } else {
+                    //其他则登录失败
                     MessagePlugin.error(data.msg);
                 }
             }).catch(r => {
@@ -42,7 +45,7 @@ export default function BaseForm() {
     };
 
     const jumpAction = () => {
-        router.push('/views/sys/register')
+        router.push('/admin/login')
     }
 
     // @ts-ignore
