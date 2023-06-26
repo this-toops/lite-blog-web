@@ -59,6 +59,7 @@ export default function BaseForm() {
             <Layout style={{
                 backgroundImage: "url('/images/b1.jpg')",
                 backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
                 height: "auto",
                 width: "auto"
             }}>
